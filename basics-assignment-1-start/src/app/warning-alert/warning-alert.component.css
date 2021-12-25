@@ -1,5 +1,7 @@
-h3 {
-    color: red;
+p {
+    background-color: red;
     font-style: italic;
-    font-size: small;
+    font-weight: bold;
+    font-size: medium;
+    padding: 20px;
 }
