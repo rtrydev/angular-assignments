@@ -7,6 +7,11 @@
         <li>Toggle the displaying of that paragraph with the button created in the first step</li>
         <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
+        <hr>
+        <button class="btn btn-primary" (click)="togglePasswordVisibility()" [textContent]="secretPasswordVisible ? 'Hide Details' : 'Display Details'"></button>
+        <p *ngIf="secretPasswordVisible">Secret Password = tuna</p>
+        <p>Click count: {{clickCount}}</p>
+        <p *ngFor="let time of clickTimes; let i = index" [ngStyle]="{backgroundColor: getBackgroundColor(i)}" [ngClass]="{colored: i > 3}">{{time}}</p>
       </ol>
     </div>
   </div>
