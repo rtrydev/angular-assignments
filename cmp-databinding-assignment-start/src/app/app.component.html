@@ -12,6 +12,15 @@
         <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
+      <app-game-control (gameTickEvent)="onGameTick($event)"></app-game-control>
+      <div class="row">
+        <div class="col-sm-6">
+          <app-odd *ngFor="let num of oddNumbers" [numberElement]="{content: num}"></app-odd>
+        </div>
+        <div class="col-sm-6">
+          <app-even *ngFor="let num of evenNumbers" [numberElement]="{content: num}"></app-even>
+        </div>
+      </div>
     </div>
   </div>
 </div>
